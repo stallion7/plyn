@@ -3,7 +3,7 @@ console.log('ahoj');
 let stav = {
 pstav: '',
 kstav: '',
-pouziti: '',
+spotreba1: '',
 dodavatel: '',
 cena: '',
 
@@ -25,8 +25,8 @@ castka: function(c = this.cena,p = this.pstav,k = this.kstav) {
 document.getElementById('calc').addEventListener('click',function() {
     stav.pstav = document.getElementById('pstav').value;
     stav.kstav = document.getElementById('kstav').value;
-    stav.pouziti = document.getElementById('spotreba1').checked ? 'ohřev vody' : 'vytápění';
+    stav.spotreba1 = document.getElementById('spotreba1').checked ? 'ohřev vody' : 'vytápění';
     stav.dodavatel = document.getElementById('dodavatel').value;
     stav.cena = document.getElementById('cena').value;
-    document.getElementById('result').innerHTML = `Největší spotřeba za ${stav.pouziti}, Dodavatel plynu : ${stav.dodavatel}, Spotřeba = ${stav.stav()}kWh, cena za plyn = ${stav.castka()}Kč`;
+    document.getElementById('result').innerHTML = `Největší spotřeba za ${stav.spotreba1}, Dodavatel plynu : ${stav.dodavatel}, Spotřeba = ${stav.stav()}kWh, cena za plyn = ${stav.castka()}Kč`;
 });
