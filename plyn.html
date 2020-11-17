@@ -14,7 +14,7 @@
     </head>
 
 <body>
-    <header class="jumbotron text-center p-4 col-md-9 mx-auto" id="header">
+    <header class="jumbotron text-center p-4 col-sm-9 mx-auto" id="header">
         <h1 class="display-3">Výpočet spotřeby plynu</h1>
     </header>
 
@@ -22,14 +22,14 @@
         <div class="container">
         <form>
         <div class="form-group row mb-3">
-            <label for="pstav" class="col-sm-3 col-form-label text-white">Počáteční stav</label>
+            <label for="pstav" id="stav" class="col-sm-3 col-form-label text-white">Počáteční stav</label>
             <div class="col-sm-9">
                 <input type="number" class="form-control" name="pstav" id="pstav"
                     placeholder="Zadejte počáteční stav plynoměru v m3"/>
                 </div>
             </div>
             <div class="form-group row mb-5">
-                <label for="kstav" class="col-sm-3 col-form-label text-white">Konečný stav</label>
+                <label for="kstav" id="stav" class="col-sm-3 col-form-label text-white">Konečný stav</label>
                 <div class="col-sm-9">
                     <input type="number" class="form-control" name="kstav" id="kstav"
                         placeholder="Zadejte konečný stav plynoměru v m3"/>
@@ -37,7 +37,7 @@
                 </div>
                 <h2 class="bg-light text-black mb-4 p-4 col-md-8 mx-auto text-center">K čemu plyn využíváte nejčastěji?</h2>
             <div class="form-group row text-white">
-                <label for="pouziti" class="col-sm-3 col-form-label text-white">použití</label>
+                <label for="pouziti" id="stav" class="col-sm-3 col-form-label text-white">použití</label>
                 <div class="col-sm-9">
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
@@ -54,14 +54,14 @@
                 </div>
             </div>
         <div class="form-group row">
-            <label for="dodavatel" class="col-sm-3 col-form-label text-white">Dodavatel</label>
+            <label for="dodavatel" id="stav" class="col-sm-3 col-form-label text-white">Dodavatel</label>
             <div class="col-sm-9">
                 <input type="text" class="form-control" name="dodavatel" id="dodavatel"
                     placeholder="Zadejte název dodavatele"/>
             </div>
         </div>
         <div class="form-group row mb-5">
-            <label for="cena" class="col-sm-3 col-form-label text-white">Cena za jednu kWh</label>
+            <label for="cena" id="stav" class="col-sm-3 col-form-label text-white">Cena za jednu kWh</label>
             <div class="col-sm-9">
                 <input type="number" class="form-control" name="cena" id="cena"
                     placeholder="Zadejte častku v CZK"/>
@@ -75,10 +75,14 @@
                 </div>
             </div>
     </form>
-         <div id="result" class="text-white">?</div>
+         <div id="result" class="text-white">spotřeba</div>
             </div>
 
     </main>
+    <footer>
+        <hr id="hr">
+        <div class="jumbotron p-3 my-1 col-sm-9 mx-auto text-center" id="footer"> &copy; 2020 - <b>SŠPU Opava</b> - Štěpán Krautwurst</div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
